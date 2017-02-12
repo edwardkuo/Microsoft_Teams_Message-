@@ -17,7 +17,7 @@ namespace SendMessagetoMSTeams
 
         public void Info(string message, [CallerMemberName] string memberName = "", [CallerFilePath] string sourceFile = "", [CallerLineNumber] int sourceLine = 0)
         {
-            SendtoMSTeams(Messageformat("Info", null, message, memberName, sourceFile, sourceLine));
+            SendtoMsTeams(Messageformat("Info", null, message, memberName, sourceFile, sourceLine));
         }
 
         private MsTeamsMessageModel Messageformat(string type, Exception exception, string message, string memberName = "", string sourceFile = "", int sourceLine = 0)
@@ -42,7 +42,7 @@ namespace SendMessagetoMSTeams
             return _message;
         }
 
-        public bool SendtoMSTeams(dynamic message)
+        public bool SendtoMsTeams(dynamic message)
         {
             var client = new RestClient(_connectorsUrl);
             var request = new RestSharp.RestRequest(Method.POST);

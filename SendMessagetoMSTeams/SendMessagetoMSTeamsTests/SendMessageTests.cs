@@ -11,7 +11,7 @@ namespace SendMessagetoMSTeams.Tests
     [TestClass()]
     public class SendMessageTests
     {
-        private string MSTeamsChannel = "MS Channel URL";
+        private string MSTeamsChannel = "Channel URL";
 
         [TestMethod()]
         public void InfoTest()
